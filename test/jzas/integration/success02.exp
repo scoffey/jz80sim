@@ -1,0 +1,3 @@
+ld a, 04
+ld b, 05
+add a, b

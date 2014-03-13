@@ -1,0 +1,66 @@
+<project name="JZ80Sim" default="all" basedir=".">
+
+	<property name="src" value="src" />
+	<property name="resources" value="resources" />
+	<property name="bin" value="bin" />
+	<property name="lib" value="lib" />
+
+	<target name="lexer">
+		<java dir="${resources}/jzas" jar="${lib}/JFlex.jar" fork="true" failonerror="true" maxmemory="128m">
+			<arg value="jzas.flex" />
+		</java>
+		<move file="${resources}/jzas/JZasLexer.java" tofile="${src}/ar/edu/itba/it/obc/jzas/lexer/JZasLexer.java" />
+	</target>
+
+	<target name="parser">
+		<exec dir="${lib}" executable="bash" os="Linux">
+			<arg line="-c" />
+			<arg value="./yacc.linux -v -Jclass=JZasParser -Jsemantic=Object -Jvalue=Object -Jnorun -Jpackage=ar.edu.itba.it.obc.jzas.parser -Jextends=ParserAdapter ../resources/jzas/jzas.y" />
+		</exec>
+		<exec dir="${lib}" executable="bash" os="Mac OS X">
+			<arg line="-c" />
+			<arg value="./yacc.macosx -v -Jclass=JZasParser -Jsemantic=Object -Jvalue=Object -Jnorun -Jpackage=ar.edu.itba.it.obc.jzas.parser -Jextends=ParserAdapter ../resources/jzas/jzas.y" />
+		</exec>
+		<exec dir="${lib}" executable="cmd.exe" os="Windows XP">
+			<arg line="/c yacc.exe -v -Jclass=JZasParser -Jsemantic=Object -Jvalue=Object -Jnorun -Jpackage=ar.edu.itba.it.obc.jzas.parser -Jextends=ParserAdapter ../resources/jzas/jzas.y" />
+		</exec>
+		<exec dir="${lib}" executable="cmd.exe" os="Windows Vista">
+			<arg line="/c yacc.exe -v -Jclass=JZasParser -Jsemantic=Object -Jvalue=Object -Jnorun -Jpackage=ar.edu.itba.it.obc.jzas.parser -Jextends=ParserAdapter ../resources/jzas/jzas.y" />
+		</exec>
+		<move file="${lib}/JZasParser.java" todir="${src}/ar/edu/itba/it/obc/jzas/parser" />
+	</target>
+
+	<target name="compile" depends="lexer, parser">
+		<javac srcdir="${src}" destdir="${bin}" sourcepath="${src}" encoding="UTF-8" debug="true" classpath="./lib/commons-cli-1.1.jar"  />
+	</target>
+
+	<target name="clean">
+		<delete>
+			<fileset dir="${bin}" />
+		</delete>
+	</target>
+
+	<target name="dist" depends="compile">
+		<copy todir="${bin}/resources">
+			<fileset dir="resources" />
+		</copy>
+		<jar jarfile="jz80sim.jar" basedir="${bin}">
+			<manifest>
+				<attribute name="Main-Class" value="ar.edu.itba.it.obc.jz80.JZ80Sim" />
+			</manifest>
+		</jar>
+		<jar jarfile="jzas.jar" basedir="${bin}">
+			<manifest>
+				<attribute name="Main-Class" value="ar.edu.itba.it.obc.jzas.run.Compiler" />
+				<attribute name="Class-Path" value="./lib/commons-cli-1.1.jar"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="test">
+		<!-- TODO -->
+	</target>
+
+	<target name="all" depends="clean, compile, dist" />
+
+</project>

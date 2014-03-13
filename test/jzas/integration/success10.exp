@@ -1,0 +1,9 @@
+#100
+ld a, 00
+ld b, 00
+ld a, 01
+ld b, 01
+ld a, 02
+ld b, 02
+ld a, 03
+ld b, 03

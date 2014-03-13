@@ -1,0 +1,7 @@
+ld a, 19
+ld a, 63
+ld a, 41
+ld a, 02
+ld a, 1E
+ld a, 14
+ld a, 2E

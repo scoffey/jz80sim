@@ -1,0 +1,5 @@
+ld a, 00
+ld a, 01
+ld a, 02
+ld a, 03
+ld a, 04

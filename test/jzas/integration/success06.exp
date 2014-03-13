@@ -1,0 +1,11 @@
+ld a, 00
+ld a, 01
+ld a, 02
+ld a, 03
+ld a, 04
+ld a, 05
+ld a, 06
+ld a, 07
+ld a, 08
+ld a, 09
+ld a, 0A

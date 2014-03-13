@@ -1,0 +1,730 @@
+ld A, (BC)
+ld A, (DE)
+ld (BC), A
+ld (DE), A
+ld HL, (08FD)
+ld HL, (DCFE)
+ld A, (08FD)
+ld A, (DCFE)
+ld (08FD), HL
+ld (DCFE), HL
+ld (08FD), A
+ld (DCFE), A
+ld B, B
+ld B, C
+ld B, D
+ld B, E
+ld B, H
+ld B, L
+ld B, (HL)
+ld B, A
+ld C, B
+ld C, C
+ld C, D
+ld C, E
+ld C, H
+ld C, L
+ld C, (HL)
+ld C, A
+ld D, B
+ld D, C
+ld D, D
+ld D, E
+ld D, H
+ld D, L
+ld D, (HL)
+ld D, A
+ld E, B
+ld E, C
+ld E, D
+ld E, E
+ld E, H
+ld E, L
+ld E, (HL)
+ld E, A
+ld H, B
+ld H, C
+ld H, D
+ld H, E
+ld H, H
+ld H, L
+ld H, (HL)
+ld H, A
+ld L, B
+ld L, C
+ld L, D
+ld L, E
+ld L, H
+ld L, L
+ld L, (HL)
+ld L, A
+ld (HL), B
+ld (HL), C
+ld (HL), D
+ld (HL), E
+ld (HL), H
+ld (HL), L
+halt
+ld (HL), A
+ld A, B
+ld A, C
+ld A, D
+ld A, E
+ld A, H
+ld A, L
+ld A, (HL)
+ld A, A
+ld B, 01
+ld B, FE
+ld C, 01
+ld C, FE
+ld D, 01
+ld D, FE
+ld E, 01
+ld E, FE
+ld H, 01
+ld H, FE
+ld L, 01
+ld L, FE
+ld (HL), 01
+ld (HL), FE
+ld A, 01
+ld A, FE
+ld SP, HL
+ld BC, (08FD)
+ld BC, (DCFE)
+ld DE, (08FD)
+ld DE, (DCFE)
+ld HL, (08FD)
+ld HL, (DCFE)
+ld SP, (08FD)
+ld SP, (DCFE)
+ld (08FD), BC
+ld (DCFE), BC
+ld (08FD), DE
+ld (DCFE), DE
+ld (08FD), HL
+ld (DCFE), HL
+ld (08FD), SP
+ld (DCFE), SP
+ld BC, 08FD
+ld BC, DCFE
+ld DE, 08FD
+ld DE, DCFE
+ld HL, 08FD
+ld HL, DCFE
+ld SP, 08FD
+ld SP, DCFE
+ld A, I
+ld A, R
+ld I, A
+ld R, A
+ex AF, AF'
+ex (SP), HL
+ex DE, HL
+exx
+di
+ei
+cpl
+and B
+and C
+and D
+and E
+and H
+and L
+and (HL)
+and A
+and 01
+and FE
+or B
+or C
+or D
+or E
+or H
+or L
+or (HL)
+or A
+or 01
+or FE
+xor B
+xor C
+xor D
+xor E
+xor H
+xor L
+xor (HL)
+xor A
+xor 01
+xor FE
+neg
+daa
+dec B
+dec C
+dec D
+dec E
+dec H
+dec L
+dec (HL)
+dec A
+dec BC
+dec DE
+dec HL
+dec SP
+inc B
+inc C
+inc D
+inc E
+inc H
+inc L
+inc (HL)
+inc A
+inc BC
+inc DE
+inc HL
+inc SP
+mlt BC
+mlt DE
+mlt HL
+mlt SP
+sbc A, B
+sbc A, C
+sbc A, D
+sbc A, E
+sbc A, H
+sbc A, L
+sbc A, (HL)
+sbc A, A
+sbc A, 01
+sbc A, FE
+sbc HL, BC
+sbc HL, DE
+sbc HL, HL
+sbc HL, SP
+sub B
+sub C
+sub D
+sub E
+sub H
+sub L
+sub (HL)
+sub A
+sub 01
+sub FE
+adc A, B
+adc A, C
+adc A, D
+adc A, E
+adc A, H
+adc A, L
+adc A, (HL)
+adc A, A
+adc A, 01
+adc A, FE
+adc HL, BC
+adc HL, DE
+adc HL, HL
+adc HL, SP
+add A, B
+add A, C
+add A, D
+add A, E
+add A, H
+add A, L
+add A, (HL)
+add A, A
+add A, 01
+add A, FE
+add HL, BC
+add HL, DE
+add HL, HL
+add HL, SP
+res 0, B
+res 0, C
+res 0, D
+res 0, E
+res 0, H
+res 0, L
+res 0, (HL)
+res 0, A
+res 1, B
+res 1, C
+res 1, D
+res 1, E
+res 1, H
+res 1, L
+res 1, (HL)
+res 1, A
+res 2, B
+res 2, C
+res 2, D
+res 2, E
+res 2, H
+res 2, L
+res 2, (HL)
+res 2, A
+res 3, B
+res 3, C
+res 3, D
+res 3, E
+res 3, H
+res 3, L
+res 3, (HL)
+res 3, A
+res 4, B
+res 4, C
+res 4, D
+res 4, E
+res 4, H
+res 4, L
+res 4, (HL)
+res 4, A
+res 5, B
+res 5, C
+res 5, D
+res 5, E
+res 5, H
+res 5, L
+res 5, (HL)
+res 5, A
+res 6, B
+res 6, C
+res 6, D
+res 6, E
+res 6, H
+res 6, L
+res 6, (HL)
+res 6, A
+res 7, B
+res 7, C
+res 7, D
+res 7, E
+res 7, H
+res 7, L
+res 7, (HL)
+res 7, A
+set 0, B
+set 0, C
+set 0, D
+set 0, E
+set 0, H
+set 0, L
+set 0, (HL)
+set 0, A
+set 1, B
+set 1, C
+set 1, D
+set 1, E
+set 1, H
+set 1, L
+set 1, (HL)
+set 1, A
+set 2, B
+set 2, C
+set 2, D
+set 2, E
+set 2, H
+set 2, L
+set 2, (HL)
+set 2, A
+set 3, B
+set 3, C
+set 3, D
+set 3, E
+set 3, H
+set 3, L
+set 3, (HL)
+set 3, A
+set 4, B
+set 4, C
+set 4, D
+set 4, E
+set 4, H
+set 4, L
+set 4, (HL)
+set 4, A
+set 5, B
+set 5, C
+set 5, D
+set 5, E
+set 5, H
+set 5, L
+set 5, (HL)
+set 5, A
+set 6, B
+set 6, C
+set 6, D
+set 6, E
+set 6, H
+set 6, L
+set 6, (HL)
+set 6, A
+set 7, B
+set 7, C
+set 7, D
+set 7, E
+set 7, H
+set 7, L
+set 7, (HL)
+set 7, A
+bit 0, B
+bit 0, C
+bit 0, D
+bit 0, E
+bit 0, H
+bit 0, L
+bit 0, (HL)
+bit 0, A
+bit 1, B
+bit 1, C
+bit 1, D
+bit 1, E
+bit 1, H
+bit 1, L
+bit 1, (HL)
+bit 1, A
+bit 2, B
+bit 2, C
+bit 2, D
+bit 2, E
+bit 2, H
+bit 2, L
+bit 2, (HL)
+bit 2, A
+bit 3, B
+bit 3, C
+bit 3, D
+bit 3, E
+bit 3, H
+bit 3, L
+bit 3, (HL)
+bit 3, A
+bit 4, B
+bit 4, C
+bit 4, D
+bit 4, E
+bit 4, H
+bit 4, L
+bit 4, (HL)
+bit 4, A
+bit 5, B
+bit 5, C
+bit 5, D
+bit 5, E
+bit 5, H
+bit 5, L
+bit 5, (HL)
+bit 5, A
+bit 6, B
+bit 6, C
+bit 6, D
+bit 6, E
+bit 6, H
+bit 6, L
+bit 6, (HL)
+bit 6, A
+bit 7, B
+bit 7, C
+bit 7, D
+bit 7, E
+bit 7, H
+bit 7, L
+bit 7, (HL)
+bit 7, A
+scf
+ccf
+rlc B
+rlc C
+rlc D
+rlc E
+rlc H
+rlc L
+rlc (HL)
+rlc A
+rrc B
+rrc C
+rrc D
+rrc E
+rrc H
+rrc L
+rrc (HL)
+rrc A
+rl B
+rl C
+rl D
+rl E
+rl H
+rl L
+rl (HL)
+rl A
+rr B
+rr C
+rr D
+rr E
+rr H
+rr L
+rr (HL)
+rr A
+sla B
+sla C
+sla D
+sla E
+sla H
+sla L
+sla (HL)
+sla A
+sra B
+sra C
+sra D
+sra E
+sra H
+sra L
+sra (HL)
+sra A
+srl B
+srl C
+srl D
+srl E
+srl H
+srl L
+srl (HL)
+srl A
+rlca
+rrca
+rla
+rra
+rld
+cp B
+cp C
+cp D
+cp E
+cp H
+cp L
+cp (HL)
+cp A
+cp 01
+cp FE
+djnz FC
+jp NZ, 08FD
+jp NZ, DCFE
+jp Z, 08FD
+jp Z, DCFE
+jp NC, 08FD
+jp NC, DCFE
+jp C, 08FD
+jp C, DCFE
+jp PO, 08FD
+jp PO, DCFE
+jp PE, 08FD
+jp PE, DCFE
+jp P, 08FD
+jp P, DCFE
+jp M, 08FD
+jp M, DCFE
+jp 08FD
+jp DCFE
+jp (HL)
+jr NZ, FD
+jr Z, FB
+jr NC, F9
+jr C, F7
+jr F5
+push BC
+push DE
+push HL
+push AF
+pop BC
+pop DE
+pop HL
+pop AF
+call 08FD
+call DCFE
+call NZ, 08FD
+call NZ, DCFE
+call Z, 08FD
+call Z, DCFE
+call NC, 08FD
+call NC, DCFE
+call C, 08FD
+call C, DCFE
+call PO, 08FD
+call PO, DCFE
+call PE, 08FD
+call PE, DCFE
+call P, 08FD
+call P, DCFE
+call M, 08FD
+call M, DCFE
+ret
+ret NZ
+ret Z
+ret NC
+ret C
+ret PO
+ret PE
+ret P
+ret M
+in A, (01)
+in A, (FE)
+out (01), A
+out (FE), A
+nop
+rst 00
+rst 08
+rst 10
+rst 18
+rst 20
+rst 28
+rst 30
+rst 38
+ld IX, (08FD)
+ld IX, (DCFE)
+ld (08FD), IX
+ld (DCFE), IX
+ld B, (IX+4E)
+ld C, (IX+4E)
+ld D, (IX+4E)
+ld E, (IX+4E)
+ld H, (IX+4E)
+ld L, (IX+4E)
+ld (IX+4E), B
+ld (IX+4E), C
+ld (IX+4E), D
+ld (IX+4E), E
+ld (IX+4E), H
+ld (IX+4E), L
+ld (IX+4E), A
+ld A, (IX+4E)
+ld (IX+4E), 01
+ld (IX+4E), FE
+ld SP, IX
+ld HL, (08FD)
+ld HL, (DCFE)
+ld (08FD), HL
+ld (DCFE), HL
+ld IX, 08FD
+ld IX, DCFE
+and (IX+4E)
+or (IX+4E)
+xor (IX+4E)
+dec (IX+4E)
+dec IX
+inc (IX+4E)
+inc IX
+sbc A, (IX+4E)
+sub (IX+4E)
+adc A, (IX+4E)
+add A, (IX+4E)
+add IX, BC
+add IX, DE
+add IX, IX
+add IX, SP
+res 0, (IX+4E)
+res 1, (IX+4E)
+res 2, (IX+4E)
+res 3, (IX+4E)
+res 4, (IX+4E)
+res 5, (IX+4E)
+res 6, (IX+4E)
+res 7, (IX+4E)
+set 0, (IX+4E)
+set 1, (IX+4E)
+set 2, (IX+4E)
+set 3, (IX+4E)
+set 4, (IX+4E)
+set 5, (IX+4E)
+set 6, (IX+4E)
+set 7, (IX+4E)
+bit 0, (IX+4E)
+bit 1, (IX+4E)
+bit 2, (IX+4E)
+bit 3, (IX+4E)
+bit 4, (IX+4E)
+bit 5, (IX+4E)
+bit 6, (IX+4E)
+bit 7, (IX+4E)
+rlc (IX+4E)
+rrc (IX+4E)
+rl (IX+4E)
+rr (IX+4E)
+sla (IX+4E)
+sra (IX+4E)
+srl (IX+4E)
+cp (IX+4E)
+push IX
+pop IX
+ld IY, (08FD)
+ld IY, (DCFE)
+ld (08FD), IY
+ld (DCFE), IY
+ld B, (IY+4E)
+ld C, (IY+4E)
+ld D, (IY+4E)
+ld E, (IY+4E)
+ld H, (IY+4E)
+ld L, (IY+4E)
+ld (IY+4E), B
+ld (IY+4E), C
+ld (IY+4E), D
+ld (IY+4E), E
+ld (IY+4E), H
+ld (IY+4E), L
+ld (IY+4E), A
+ld A, (IY+4E)
+ld (IY+4E), 01
+ld (IY+4E), FE
+ld SP, IY
+ld HL, (08FD)
+ld HL, (DCFE)
+ld (08FD), HL
+ld (DCFE), HL
+ld IY, 08FD
+ld IY, DCFE
+and (IY+4E)
+or (IY+4E)
+xor (IY+4E)
+dec (IY+4E)
+dec IY
+inc (IY+4E)
+inc IY
+sbc A, (IY+4E)
+sub (IY+4E)
+adc A, (IY+4E)
+add A, (IY+4E)
+add IY, BC
+add IY, DE
+add IY, IY
+add IY, SP
+res 0, (IY+4E)
+res 1, (IY+4E)
+res 2, (IY+4E)
+res 3, (IY+4E)
+res 4, (IY+4E)
+res 5, (IY+4E)
+res 6, (IY+4E)
+res 7, (IY+4E)
+set 0, (IY+4E)
+set 1, (IY+4E)
+set 2, (IY+4E)
+set 3, (IY+4E)
+set 4, (IY+4E)
+set 5, (IY+4E)
+set 6, (IY+4E)
+set 7, (IY+4E)
+bit 0, (IY+4E)
+bit 1, (IY+4E)
+bit 2, (IY+4E)
+bit 3, (IY+4E)
+bit 4, (IY+4E)
+bit 5, (IY+4E)
+bit 6, (IY+4E)
+bit 7, (IY+4E)
+rlc (IY+4E)
+rrc (IY+4E)
+rl (IY+4E)
+rr (IY+4E)
+sla (IY+4E)
+sra (IY+4E)
+srl (IY+4E)
+cp (IY+4E)
+push IY
+pop IY

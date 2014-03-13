@@ -1,0 +1,5 @@
+ld a, (FF00)
+ld a, (FF03)
+ld a, (FF06)
+ld a, (FF09)
+ld a, (FF0C)
